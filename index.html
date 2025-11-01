@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Backend Languages 2025 | Stack Overflow Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Animation Elements -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero-section">
+            <h1 class="main-title">Top 10 Backend Programming Languages</h1>
+            <p class="subtitle">Stack Overflow Developer Survey 2025</p>
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalDevelopers">0</span>
+                    <span class="stat-label">Developers Surveyed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Top Languages</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="avgSatisfaction">0</span>
+                    <span class="stat-label">Avg Satisfaction</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Panel -->
+        <section class="control-panel">
+            <button class="btn btn-primary" id="animateCardsBtn">
+                <span class="btn-icon">✨</span> Animate Rankings
+            </button>
+            <button class="btn btn-secondary" id="sortByPopularity">
+                <span class="btn-icon">📊</span> Sort by Popularity
+            </button>
+            <button class="btn btn-secondary" id="sortBySatisfaction">
+                <span class="btn-icon">❤️</span> Sort by Satisfaction
+            </button>
+            <button class="btn btn-outline" id="resetBtn">
+                <span class="btn-icon">🔄</span> Reset
+            </button>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search languages...">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid">Grid View</button>
+                <button class="view-btn" data-view="list">List View</button>
+            </div>
+        </section>
+
+        <!-- Language Cards Container -->
+        <section class="languages-grid" id="languagesGrid">
+            <!-- Card 1: JavaScript/Node.js -->
+            <article class="language-card" data-rank="1" data-popularity="67.9" data-satisfaction="71.2">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">1</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #f7df1e, #f0db4f);">
+                                <span class="logo-text">JS</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">JavaScript / Node.js</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 67.9%;"></div>
+                        </div>
+                        <p class="popularity-text">67.9% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>JavaScript / Node.js</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">67.9%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">71.2%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Full-stack</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Express, Nest</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Python -->
+            <article class="language-card" data-rank="2" data-popularity="51.3" data-satisfaction="68.5">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">2</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #3776ab, #ffd343);">
+                                <span class="logo-text">Py</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">Python</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 51.3%;"></div>
+                        </div>
+                        <p class="popularity-text">51.3% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Python</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">51.3%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">68.5%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">AI/ML, Web</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Django, Flask</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Java -->
+            <article class="language-card" data-rank="3" data-popularity="30.6" data-satisfaction="45.8">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">3</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #f89820, #e76f00);">
+                                <span class="logo-text">J</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">Java</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 30.6%;"></div>
+                        </div>
+                        <p class="popularity-text">30.6% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Java</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">30.6%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">45.8%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Enterprise</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Spring Boot</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: C# -->
+            <article class="language-card" data-rank="4" data-popularity="27.8" data-satisfaction="62.4">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">4</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #953dac, #68217a);">
+                                <span class="logo-text">C#</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">C#</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 27.8%;"></div>
+                        </div>
+                        <p class="popularity-text">27.8% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>C#</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">27.8%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">62.4%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Enterprise, Games</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">.NET, ASP.NET</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5: PHP -->
+            <article class="language-card" data-rank="5" data-popularity="18.5" data-satisfaction="38.2">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">5</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #8892be, #4f5b93);">
+                                <span class="logo-text">PHP</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">PHP</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 18.5%;"></div>
+                        </div>
+                        <p class="popularity-text">18.5% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>PHP</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">18.5%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">38.2%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Web, CMS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Laravel, Symfony</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6: Go -->
+            <article class="language-card" data-rank="6" data-popularity="16.2" data-satisfaction="78.9">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">6</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #00add8, #007d9c);">
+                                <span class="logo-text">Go</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">Go</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 16.2%;"></div>
+                        </div>
+                        <p class="popularity-text">16.2% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Go</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">16.2%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">78.9%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Cloud, Systems</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Gin, Echo</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 7: Rust -->
+            <article class="language-card" data-rank="7" data-popularity="13.1" data-satisfaction="86.7">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">7</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #ce422b, #a33216);">
+                                <span class="logo-text">Rs</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">Rust</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 13.1%;"></div>
+                        </div>
+                        <p class="popularity-text">13.1% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Rust</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">13.1%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">86.7%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Systems, Web</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Actix, Rocket</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 8: TypeScript -->
+            <article class="language-card" data-rank="8" data-popularity="12.4" data-satisfaction="82.3">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">8</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #3178c6, #235a97);">
+                                <span class="logo-text">TS</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">TypeScript</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 12.4%;"></div>
+                        </div>
+                        <p class="popularity-text">12.4% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>TypeScript</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">12.4%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">82.3%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Full-stack</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">NestJS, Deno</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 9: Ruby -->
+            <article class="language-card" data-rank="9" data-popularity="6.8" data-satisfaction="55.6">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">9</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #cc342d, #a91e1e);">
+                                <span class="logo-text">Rb</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">Ruby</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 6.8%;"></div>
+                        </div>
+                        <p class="popularity-text">6.8% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Ruby</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">6.8%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">55.6%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Web, Startups</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Rails, Sinatra</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 10: Kotlin -->
+            <article class="language-card" data-rank="10" data-popularity="5.9" data-satisfaction="74.5">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="rank-badge">10</div>
+                        <div class="language-logo">
+                            <div class="logo-circle" style="background: linear-gradient(135deg, #7f52ff, #5c3dbe);">
+                                <span class="logo-text">Kt</span>
+                            </div>
+                        </div>
+                        <h3 class="language-name">Kotlin</h3>
+                        <div class="popularity-bar">
+                            <div class="popularity-fill" style="width: 5.9%;"></div>
+                        </div>
+                        <p class="popularity-text">5.9% of developers use it</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Kotlin</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-label">Popularity</span>
+                                <span class="stat-value">5.9%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Satisfaction</span>
+                                <span class="stat-value">74.5%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Use Case</span>
+                                <span class="stat-value">Android, Server</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Framework</span>
+                                <span class="stat-value">Ktor, Spring</span>
+                            </div>
+                        </div>
+                        <button class="back-btn">Back</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Data based on Stack Overflow Developer Survey 2025</p>
+            <p>Project demonstrating CSS Animations & JavaScript Functions</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
